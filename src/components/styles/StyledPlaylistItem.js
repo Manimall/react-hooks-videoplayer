@@ -55,7 +55,7 @@ const StyledPlaylistItem = styled.div`
     min-width: 45px;
     color: #fff;
     font-size: 0.8em;
-    padding: 0px 5px;
+    padding: 0 5px;
     height: 20px;
     text-align: center;
     border-radius: 5px;
@@ -69,7 +69,7 @@ const StyledPlaylistItem = styled.div`
     max-width: 30px;
     padding: 0 20px;
     border-left: 2px solid #565656;
-    font-family: "fontello";
+    font-family: "fontello", 'Aria', sans-serif;
     font-style: normal;
     font-weight: normal;
   }

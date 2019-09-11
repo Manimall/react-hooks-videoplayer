@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.6",
+    "react": "^16.9.0",
     "react-dom": "^16.8.6",
     "react-player": "1.12.0",
     "react-router-dom": "5.0.1",
@@ -25,5 +25,8 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "http://www.weibenfalk.com/react_videoplayer/"
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^1.7.0"
+  }
 }
+
