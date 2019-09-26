@@ -5,7 +5,7 @@ import StyledVideoWrapper from "./styles/StyledVideoWrapper";
 
 const Video = props => {
 	const { autoplay, activeVideo, endCallback, progressCallback } = props;
-	console.log(props);
+	// console.log(props);
 	return (
 		<StyledVideo>
 			<StyledVideoWrapper>

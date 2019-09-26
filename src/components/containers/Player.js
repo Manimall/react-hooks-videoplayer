@@ -45,6 +45,7 @@ const themeLight = {
 const Player = (props) => {
 
 	const videos = JSON.parse(document.querySelector(`input[name="videos"]`).value);
+
 	const savedState = JSON.parse(localStorage.getItem(`${videos.playlistId}`));
 
 	console.log(props);
@@ -52,14 +53,12 @@ const Player = (props) => {
 
 	// noinspection JSUnresolvedVariable
 	const initialState = {
-		videos: savedState.videos || videos.playlist,
-		activeVideo: savedState.activeVideo || videos.playlist[0],
-		nightMode: savedState.nightMode || false,
-		playlistId: savedState.playlistId || videos.playlistId,
+		videos: savedState ? savedState.videos : videos.playlist,
+		activeVideo: savedState ? savedState.activeVideo : videos.playlist[0],
+		nightMode: savedState ? savedState.nightMode : false,
+		playlistId: savedState ? savedState.playlistId : videos.playlistId,
 		autoplay: false,
 	};
-
-	console.log(initialState);
 
 	const [state, setState] = useState(initialState);
 
@@ -94,7 +93,6 @@ const Player = (props) => {
 
 	const endCallback = () => {
 		const videoId = params.activeVideo;
-		console.log(videoId);
 
 		const currentVideoIndex = state.videos.findIndex(video => video.id === videoId);
 
